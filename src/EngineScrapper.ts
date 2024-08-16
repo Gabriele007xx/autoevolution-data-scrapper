@@ -56,7 +56,7 @@ export class EngineScrapper {
         {
             url = "";
         }
-        
+        await browser.close();
         return new Brand(numberProductionModels!, numberDiscountinedModels!, url, text!);
         
     }
@@ -73,13 +73,14 @@ export class EngineScrapper {
         const page = await browser.newPage();
         await page.goto('https://www.autoevolution.com/cars/' + url);
         console.log("connnected at " + 'https://www.autoevolution.com/cars/' + url);
-        const AllData = await page.$('.techdata .right');
+        const AllData = await page.$$('.techdata .right');
         if(AllData)
         {
             console.log("Eccomi qua");
             const things = await page.evaluate(element => element.textContent, AllData);
             return things;
         }
+        await browser.close();
         return null;
     }
 }
