@@ -84,3 +84,5 @@ export class EngineScrapper {
         return null;
     }
 }
+
+module.exports = { EngineScrapper };
