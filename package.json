@@ -1,11 +1,11 @@
 {
-  "name": "engine-specs-data-scrapper",
+  "name": "autoevolution-data-scrapper",
   "version": "1.0.0",
   "description": "Scrap data from autoevolution.com",
   "main": "index.js",
   "scripts": {
     "compile": "tsc --noEmit && tsc --outDir build",
-    "test": "node ./build/main.js"
+    "test": "node ./build/test/main.js"
   },
   "author": "Gabriele Lo Re",
   "license": "ISC",
