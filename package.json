@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "puppeteer": "^23.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
   }
 }
