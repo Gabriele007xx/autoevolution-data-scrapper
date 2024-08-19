@@ -71,7 +71,7 @@ export class EngineScrapper {
       const things = [];
       for (const element of AllData) {
         const text = await page.evaluate(
-          (el) => el.textContent ? el.textContent.trim() : '',
+          (el) => el.textContent ? el.textContent : '',
           element
         );
         things.push(text);
